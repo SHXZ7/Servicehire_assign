@@ -43,7 +43,7 @@ export const protect = async (
       });
     }
 
-    req.user = user;
+    (req as any).user = user;
 
     next();
   } catch (error) {
