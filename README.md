@@ -28,6 +28,19 @@ A full-stack, enterprise-grade lead management dashboard built with Next.js, Nod
 - MongoDB / Mongoose
 - JSONWebToken (JWT) / BcryptJS
 
+## 🔌 API Documentation
+
+### Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login and receive JWT
+
+### Leads (Protected Routes)
+- `GET /api/leads` - Get paginated leads (Supports query params: `page`, `search`, `status`, `source`, `sort`)
+- `GET /api/leads/:id` - Get a single lead
+- `POST /api/leads` - Create a new lead
+- `PUT /api/leads/:id` - Update an existing lead
+- `DELETE /api/leads/:id` - Delete a lead
+
 ## 🐳 Running with Docker (Recommended)
 
 The easiest way to run the entire application (Database, Backend, and Frontend) is using Docker Compose.
