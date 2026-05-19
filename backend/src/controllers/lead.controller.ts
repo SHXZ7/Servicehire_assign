@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import type { FilterQuery } from "mongoose";
 
 import Lead, { ILead } from "../models/Lead";
 
@@ -35,7 +34,7 @@ export const getLeads = async (
       page = "1",
     } = req.query;
 
-    const query: FilterQuery<ILead> = {};
+    const query: Record<string, any> = {};
 
     // FILTER BY STATUS
     if (status) {
